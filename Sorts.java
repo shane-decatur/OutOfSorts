@@ -41,7 +41,7 @@ public class Sorts{
         data[index+1] = data[index];
         index--;
       }
-      data[index] = insertValue;
+      data[index+1] = insertValue;
     }
   }
 }
