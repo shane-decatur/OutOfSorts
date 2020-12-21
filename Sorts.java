@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Sorts{
 
   public static void bubbleSort(int[] data){
@@ -11,6 +12,7 @@ public class Sorts{
           data[j] = data[j-1];
           data[j-1] = temp;
         }
+        // System.out.println(Arrays.toString(data));
       }
     }
   }
@@ -27,6 +29,19 @@ public class Sorts{
       }
       data[index] = data[i];
       data[i] = minimum;
+      // System.out.println(Arrays.toString(data));
+    }
+  }
+
+  public static void insertionSort(int[] data){
+    for (int i = 1; i < data.length; i++){
+      int index = i-1;
+      int insertValue = data[i];
+      while (index >= 0 && insertValue < data[index]){
+        data[index+1] = data[index];
+        index--;
+      }
+      data[index] = insertValue;
     }
   }
 }
